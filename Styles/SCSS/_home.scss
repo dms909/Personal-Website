@@ -69,6 +69,21 @@
           text-align: center;
         }
       }
+
+      .about-card {
+        border-style: solid;
+        border-color: #1DB954;
+        border-radius: 7px;
+        margin: -297px 1160px 0;
+        width: 20%;
+
+        .about-card-body {
+          font-size: 75px;
+          margin: 70px 0;
+          padding-bottom: 30px;
+          text-align: center;
+        }
+      }
     }
   }
 }
