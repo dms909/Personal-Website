@@ -1,7 +1,9 @@
-@mixin header {
+@mixin header-mixin {
   background-color: #1DB954;
-  margin: -20px -10px;
+  margin: -50px 15px -50px -8px;
   padding: 1px 0;
+  position: fixed;
+  width: 100%;
 
   .header-name {
     color: #ffffff;
@@ -26,5 +28,28 @@
         text-decoration: none;
       }
     }
+  }
+}
+
+@mixin footer-mixin {
+  background-color: #000000;
+  bottom: 0;
+  color: gray;
+  left: 0;
+  padding-top: -50px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+
+  nav {
+    padding: 5px 0;
+
+    a {
+      padding: 50px;
+    }
+  }
+
+  h4 {
+    margin: 10px;
   }
 }

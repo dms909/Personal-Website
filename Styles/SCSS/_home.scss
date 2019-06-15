@@ -2,8 +2,10 @@
 @import "animations";
 .home {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  overflow: auto;
+
   header {
-    @include header();
+    @include header-mixin;
   }
 
   .home-head {
@@ -25,66 +27,73 @@
   }
 
   .home-body {
+    @media only screen and (min-width: 600px) {
+      width: 1650px;
 
-    min-width: 1920px;
-    .body-navigation-container {
-      -webkit-animation: jump 1s cubic-bezier(0.3, 1.2, 0.8, 1.2);
-      animation: jump 1s cubic-bezier(0.3, 1.2, 0.8, 1.2);
+      .body-navigation-container {
+        -webkit-animation: jump 1s cubic-bezier(0.3, 1.2, 0.8, 1.2);
+        animation: jump 1s cubic-bezier(0.3, 1.2, 0.8, 1.2);
 
-      .card-header {
-        background-color: #1ab97c;
-        color: #ffffff;
-        text-align: center;
-        margin-top: 0;
-        padding-bottom: 10px;
-      }
-
-      .projects-card {
-        border-style: solid;
-        border-color: #1DB954;
-        border-radius: 7px;
-        margin: 0 160px;
-        padding-bottom: 0;
-        width: 20%;
-
-        .projects-card-body {
-          font-size: 75px;
-          margin: 70px 0;
-          padding-bottom: 30px;
+        .card-header {
+          background-color: #1ab97c;
+          color: #ffffff;
           text-align: center;
+          margin-top: 0;
+          overflow: auto;
+          padding-bottom: 10px;
         }
-      }
 
-      .music-card {
-        border-style: solid;
-        border-color: #1DB954;
-        border-radius: 7px;
-        margin: -297px 660px 0;
-        width: 20%;
+        .projects-card {
+          border-style: solid;
+          border-color: #1DB954;
+          border-radius: 7px;
+          margin: 0 160px;
+          padding-bottom: 0;
+          width: 15%;
 
-        .music-card-body {
-          font-size: 75px;
-          margin: 70px 0;
-          padding-bottom: 30px;
-          text-align: center;
+          .projects-card-body {
+            font-size: 75px;
+            margin: 70px 0;
+            padding-bottom: 10px;
+            text-align: center;
+          }
         }
-      }
 
-      .about-card {
-        border-style: solid;
-        border-color: #1DB954;
-        border-radius: 7px;
-        margin: -297px 1160px 0;
-        width: 20%;
+        .music-card {
+          border-style: solid;
+          border-color: #1DB954;
+          border-radius: 7px;
+          margin: -276px 560px 0;
+          width: 15%;
 
-        .about-card-body {
-          font-size: 75px;
-          margin: 70px 0;
-          padding-bottom: 30px;
-          text-align: center;
+          .music-card-body {
+            font-size: 75px;
+            margin: 70px 0;
+            padding-bottom: 10px;
+            text-align: center;
+          }
+        }
+
+        .about-card {
+          border-style: solid;
+          border-color: #1DB954;
+          border-radius: 7px;
+          margin: -276px 960px 0;
+          width: 15%;
+
+          .about-card-body {
+            font-size: 75px;
+            margin: 70px 0;
+            padding-bottom: 10px;
+            text-align: center;
+          }
         }
       }
     }
+  }
+
+  footer {
+    @include footer-mixin;
   }
 }
 
