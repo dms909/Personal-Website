@@ -16,11 +16,14 @@
 }
 .home {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  overflow: auto;
 }
 .home header {
   background-color: #1DB954;
-  margin: -20px -10px;
+  margin: -50px 15px -50px -8px;
   padding: 1px 0;
+  position: fixed;
+  width: 100%;
 }
 .home header .header-name {
   color: #ffffff;
@@ -58,46 +61,81 @@
   margin: 15px;
   padding: -20px;
 }
-.home .home-body {
-  min-width: 1920px;
+@media only screen and (min-width: 600px) {
+  .home .home-body {
+    width: 1650px;
+  }
+  .home .home-body .body-navigation-container {
+    -webkit-animation: jump 1s cubic-bezier(0.3, 1.2, 0.8, 1.2);
+    animation: jump 1s cubic-bezier(0.3, 1.2, 0.8, 1.2);
+  }
+  .home .home-body .body-navigation-container .card-header {
+    background-color: #1ab97c;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0;
+    overflow: auto;
+    padding-bottom: 10px;
+  }
+  .home .home-body .body-navigation-container .projects-card {
+    border-style: solid;
+    border-color: #1DB954;
+    border-radius: 7px;
+    margin: 0 160px;
+    padding-bottom: 0;
+    width: 15%;
+  }
+  .home .home-body .body-navigation-container .projects-card .projects-card-body {
+    font-size: 75px;
+    margin: 70px 0;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .home .home-body .body-navigation-container .music-card {
+    border-style: solid;
+    border-color: #1DB954;
+    border-radius: 7px;
+    margin: -276px 560px 0;
+    width: 15%;
+  }
+  .home .home-body .body-navigation-container .music-card .music-card-body {
+    font-size: 75px;
+    margin: 70px 0;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .home .home-body .body-navigation-container .about-card {
+    border-style: solid;
+    border-color: #1DB954;
+    border-radius: 7px;
+    margin: -276px 960px 0;
+    width: 15%;
+  }
+  .home .home-body .body-navigation-container .about-card .about-card-body {
+    font-size: 75px;
+    margin: 70px 0;
+    padding-bottom: 10px;
+    text-align: center;
+  }
 }
-.home .home-body .body-navigation-container {
-  -webkit-animation: jump 1s cubic-bezier(0.3, 1.2, 0.8, 1.2);
-  animation: jump 1s cubic-bezier(0.3, 1.2, 0.8, 1.2);
-}
-.home .home-body .body-navigation-container .card-header {
-  background-color: #1ab97c;
-  color: #ffffff;
+.home footer {
+  background-color: #000000;
+  bottom: 0;
+  color: gray;
+  left: 0;
+  padding-top: -50px;
+  position: fixed;
   text-align: center;
-  margin-top: 0;
-  padding-bottom: 10px;
+  width: 100%;
 }
-.home .home-body .body-navigation-container .projects-card {
-  border-style: solid;
-  border-color: #1DB954;
-  border-radius: 7px;
-  margin: 0 160px;
-  padding-bottom: 0;
-  width: 20%;
+.home footer nav {
+  padding: 5px 0;
 }
-.home .home-body .body-navigation-container .projects-card .projects-card-body {
-  font-size: 75px;
-  margin: 70px 0;
-  padding-bottom: 30px;
-  text-align: center;
+.home footer nav a {
+  padding: 50px;
 }
-.home .home-body .body-navigation-container .music-card {
-  border-style: solid;
-  border-color: #1DB954;
-  border-radius: 7px;
-  margin: -297px 660px 0;
-  width: 20%;
-}
-.home .home-body .body-navigation-container .music-card .music-card-body {
-  font-size: 75px;
-  margin: 70px 0;
-  padding-bottom: 30px;
-  text-align: center;
+.home footer h4 {
+  margin: 10px;
 }
 
 /*# sourceMappingURL=home.css.map */
