@@ -1,0 +1,12 @@
+@import "mixins";
+@import "animations";
+
+.projects {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+  overflow: auto;
+
+  header {
+    @include header-mixin;
+    margin: -18px 15px -50px -8px;
+  }
+}
